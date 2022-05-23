@@ -1,0 +1,44 @@
+@import "../global/mixins/mixins.scss";
+$ht-primary-color:#051061;
+@include b(btn){
+  position: relative;
+  border: 1px solid rgb(0 0 0 / 0%);
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: rgb(255 255 255);
+  // border: 1px solid rgb(220 223 230);
+  color: rgb(96 98 102);
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 4px 10px;
+  font-size: 14px;
+  border-radius: 2px;
+  @include m(primary){
+    color: rgb(255 255 255);
+    background-color: $ht-primary-color;
+    border-color: #0b2a9e;
+    // border-color: #009cff;
+    &:hover{
+      background-color: lighten($color: $ht-primary-color, $amount: 10);
+    }
+    @include when(active){
+      border: 1px solid #009cff;
+    }
+  }
+  @include m(small){
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 2px;
+  }
+
+}

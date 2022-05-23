@@ -1,0 +1,60 @@
+@use "sass:math";
+// base color
+$ht-base-color:#fff;
+$ht-font-white:$ht-base-color;
+$ht-font-color:#000;
+$ht-font-color1:#007ea0;
+$ht-font-color2:lighten($ht-font-color1,20%);
+$ht-font-color3:#22edff;
+$ht-font-color4:#9599a3;
+$ht-font-fa-guang:$ht-font-color3;
+
+
+//背景色
+
+$ht-base-bg:$ht-base-color;
+$ht-base-bg1:#75c2e3;
+$ht-base-bg2:lighten($ht-base-bg1,80%);
+$ht-base-bg3:#0ca3b6 !default;
+$ht-base-bg4:#015e9f;
+$ht-base-bg5:#228dff;
+$ht-font-shadow:#228dff;
+
+
+
+// 警告
+
+$ht-base-weixian:#d00; // 非常重要
+$ht-base-zhongyao:#ff6d12;//重要
+$ht-base-yiban:#ffce00;//重要
+$ht-base-zhengchang:#64e207; //正常
+$ht-base-buzhongyao:#909399; //不重要
+
+// 边框颜色
+$ht-base-border:#63d1ff;
+$ht-base-border1:#32B8DB;
+$ht-base-border2:#d4d4d4;
+
+
+
+// 高度
+$ht-header-h1:80px;
+$ht-header-h2:50px;
+$ht-header-h3:40px;
+$ht-header-h4:30px;
+
+// 字号
+$ht-font-base:14px;
+$ht-font-small:$ht-font-base - 2px;
+$ht-font-header:$ht-font-base + 2px;
+
+// 表格
+$ht-table-header-bg: darken($ht-base-bg1,10%);
+$ht-table-td-pading: 2px 5px;
+$th-table-header-font-color:$ht-font-white;
+$th-table-body-font-color:$ht-font-color;
+$th-table-border:$ht-base-border;
+
+:export {
+  baseColor1: $ht-base-border1;
+}

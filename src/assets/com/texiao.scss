@@ -1,0 +1,75 @@
+@import "../global/mixins/mixins.scss";
+
+.ht-point,
+.ht-point::before,
+.ht-point::after {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  content: '';
+}
+
+.ht-point::before {
+  animation: scale 2s infinite;
+}
+
+.ht-point::after {
+  animation: scale2 2s infinite;
+}
+
+
+
+
+.ht-point,
+.ht-point::before,
+.ht-point::after {
+  /* 设置颜色 */
+  background-color: rgba(241, 34, 30, .9);
+}
+
+.ht-point2,
+.ht-point2::before,
+.ht-point2::after {
+  /* 设置颜色 */
+  background-color: rgba(0, 221, 254, .9);
+}
+
+.ht-point3,
+.ht-point3::before,
+.ht-point3::after {
+  /* 设置颜色 */
+  background-color: rgba(1, 88, 255, .9);
+}
+
+.ht-point4,
+.ht-point4::before,
+.ht-point4::after {
+  /* 设置颜色 */
+  background-color: rgba(135, 229, 8, .9);
+}
+
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+    opacity: .9
+  }
+
+  100% {
+    transform: scale(6);
+    opacity: 0;
+  }
+}
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1);
+    opacity: .9;
+  }
+
+  100% {
+    transform: scale(12);
+    opacity: 0;
+  }
+}

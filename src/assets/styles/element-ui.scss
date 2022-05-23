@@ -1,0 +1,25 @@
+@import "../element-dark/dark-el-table.scss";
+@import "../element-dark/dark-el-tabs.scss";
+@import "../element-dark/dark-el-pagination.scss";
+
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+.el-scrollbar__wrap {
+  overflow: auto !important;
+  height: 100%;
+}
+.el-popover.ht-dark{
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: 1px solid rgb(0,0,0);
+  .popper__arrow:after {
+    border-bottom-color: rgb(0,0,0);
+  }
+  .popper__arrow {
+      border-bottom-color: rgb(0,0,0);
+  }
+}

@@ -1,0 +1,22 @@
+@import "../global/mixins/mixins.scss";
+@include b(dark-tabs) {
+  .el-tabs__nav-next, .el-tabs__nav-prev {
+    color: $ht-base-border1;
+  }
+  .el-tabs__active-bar{
+    background-color: $ht-base-border1;
+  }
+  .el-tabs__nav-wrap::after {
+    background-color: darken($ht-base-border,60%);
+  }
+  .el-tabs__item{
+    color:$ht-font-color1;
+  }
+  .el-tabs__item.is-active {
+    color: $ht-font-color3;
+  }
+  .el-tabs__item:hover {
+      color: darken($ht-font-color3,10%);
+  }
+}
+

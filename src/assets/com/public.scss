@@ -1,0 +1,254 @@
+@import "../global/mixins/mixins.scss";
+
+.htflex {
+  display: flex;
+
+  div {
+    flex: 1
+  }
+}
+
+.clearfix {
+  @include utils-clearfix;
+}
+
+.fr {
+  float: right !important;
+}
+
+.fl {
+  float: left !important;
+}
+
+.pull-left {
+  @extend .fr;
+}
+
+.pull-right {
+  @extend .fl;
+}
+
+@for $var from 1 to 6 {
+  .ml#{$var*5} {
+    margin-left: 5px * $var;
+  }
+
+  .mr#{$var*5} {
+    margin-right: 5px * $var;
+  }
+
+  .mt#{$var*5} {
+    margin-top: 5px * $var;
+  }
+
+  .mb#{$var*5} {
+    margin-bottom: 5px * $var;
+  }
+
+  .mg#{$var*5} {
+    margin: 5px * $var;
+  }
+
+  // 内边距
+  .pl#{$var*5} {
+    padding-left: 5px * $var;
+  }
+
+  .pr#{$var*5} {
+    padding-right: 5px * $var;
+  }
+
+  .pt#{$var*5} {
+    padding-top: 5px * $var;
+  }
+
+  .pb#{$var*5} {
+    padding-bottom: 5px * $var;
+  }
+
+  .pd#{$var*5} {
+    padding: 5px * $var;
+  }
+
+}
+
+@for $var from 1 to 9 {
+  .fs1#{$var} {
+    font-size: #{1+$var*0.1}rem;
+  }
+}
+
+@for $var from 1 to 10 {
+  .h#{$var}0 {
+    height: #{$var}+"0%";
+  }
+}
+
+@for $var from 1 to 10 {
+  .h#{$var}0v {
+    height: #{$var}+"0vh";
+  }
+}
+
+.text-pt {
+  color: $ht-font-color1;
+}
+
+$ht-base-weixian:#d00; // 非常重要
+$ht-base-zhongyao:#ff6d12; //重要
+$ht-base-yiban:#ffce00; //重要
+$ht-base-zhengchang:#64e207; //正常
+$ht-base-buzhongyao:#909399; //不重要
+
+.text-weixian {
+  color: $ht-base-weixian;
+}
+
+.text-zhongyao {
+  color: $ht-base-zhongyao;
+}
+
+.text-yiban {
+  color: $ht-base-yiban;
+}
+
+.text-zhengchang {
+  color: $ht-base-zhengchang;
+}
+
+.text-buzhongyao {
+  color: $ht-base-buzhongyao;
+}
+
+.text-white {
+  color: #fff;
+
+}
+
+.ht-shadow {
+  box-shadow: 0px 0px 6px 4px rgba(4, 33, 41, 0.09);
+}
+
+.ht-border {
+  border: 1px solid $ht-base-border;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar-thumb {
+  // background-color: rgb(48,65,86);
+}
+
+// ::webkit-scrollbar{
+//   background-color: transparent;
+// }
+//去掉滚动条的右下角白色方框
+::-webkit-scrollbar-corner {
+  background-color: inherit !important;
+}
+
+// ::-webkit-scrollbar-track{
+//   background-color: transparent;
+// }
+
+
+.ht-dark {
+  .el-carousel__mask {
+    background-color: transparent;
+  }
+}
+
+.carousel-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.ht-img--view {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .el-image {
+    height: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.ht-remove-margin {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.trans180 {
+  transform: rotate(180deg);
+}
+
+.trans90 {
+  transform: rotate(90deg);
+}
+
+.ht-dian {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+// 置顶
+.indexTop {
+  z-index: 9999 !important;
+}
+
+.ht-corner{
+  width: 100px;
+    height: 100px;
+    -webkit-transform: translate(50%,-50%);
+    transform: translate(50%,-50%);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    .ht-corner-mark {
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      -webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 12%), 0 0 6px rgb(0 0 0 / 12%);
+      box-shadow: 0 2px 4px rgb(0 0 0 / 12%), 0 0 6px rgb(0 0 0 / 12%);
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      -webkit-transform: translateY(-50%) rotate(45deg);
+      transform: translateY(-50%) rotate(45deg);
+    }
+}

@@ -1,0 +1,11 @@
+@import "../global/mixins/mixins.scss";
+
+@include b(divider){
+  @include m(title){
+    border: 1px solid $ht-base-bg3;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background: $ht-base-bg4;
+    color: $ht-font-white;
+  }
+}

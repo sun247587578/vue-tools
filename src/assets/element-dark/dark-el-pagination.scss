@@ -1,0 +1,45 @@
+@import "../global/mixins/mixins.scss";
+$--pagination-font-color:$ht-font-color3;
+@include b(dark-pagination) {
+  // color: $--pagination-font-color;
+  .el-pagination__total{
+    color: $ht-font-color4;
+  }
+  .el-input__inner{
+    color: $ht-font-color4 !important;
+    background: transparent !important;
+  }
+  .btn-prev, .btn-next{
+    background-color:transparent !important;
+    color:$ht-font-color4 !important;
+  }
+  .button:disabled{
+    background-color:transparent !important;
+    color:$ht-font-color4 !important;
+  }
+  .el-pager li{
+    background: rgb(0 0 0 / 40%) !important;
+  }
+  .el-pager li.active{
+    color: $ht-font-color2 !important;
+  }
+  // .el-tabs__nav-next, .el-tabs__nav-prev {
+  //   color: $ht-base-border1;
+  // }
+  // .el-tabs__active-bar{
+  //   background-color: $ht-base-border1;
+  // }
+  // .el-tabs__nav-wrap::after {
+  //   background-color: darken($ht-base-border,60%);
+  // }
+  // .el-tabs__item{
+  //   color:$ht-font-color1;
+  // }
+  // .el-tabs__item.is-active {
+  //   color: $ht-font-color3;
+  // }
+  // .el-tabs__item:hover {
+  //     color: darken($ht-font-color3,10%);
+  // }
+}
+

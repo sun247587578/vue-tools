@@ -1,0 +1,49 @@
+@import "../global/mixins/mixins.scss";
+
+@include b(table) {
+  width: 100%;
+  display: table;
+  font-size: $ht-font-base;
+  
+  @include m(head) {
+    thead {
+      tr {
+        th{
+            padding:$ht-table-td-pading;
+            text-align: left;
+          }
+        line-height: 40px;
+        background-image: linear-gradient(
+          180deg,
+          lighten($ht-table-header-bg,40%) 0%,
+          $ht-table-header-bg 53%,
+          lighten($ht-table-header-bg,40%) 100%
+        );
+        color: $th-table-header-font-color;
+      }
+    }
+  }
+  @include m(stripe) {
+    tbody{
+      tr{
+        line-height: 2.5rem;
+        color:$th-table-body-font-color;
+        td{
+          padding:$ht-table-td-pading;
+        }
+        &:nth-child(odd){
+          background: lighten($ht-table-header-bg,70%);
+        }
+        &:nth-child(even){
+          background: lighten($ht-table-header-bg,30%);
+        }
+      }
+    }
+  }
+  @include m(boder){
+    th,td{
+      border:1px solid $th-table-border;
+    }
+  }
+  
+}

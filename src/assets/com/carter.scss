@@ -1,0 +1,22 @@
+@import "../global/mixins/mixins.scss";
+@include b(carter){
+  height: 100%;
+  @include m(body){
+    height: calc(100% - #{$ht-header-h2});
+  }
+}
+.ht-carter-header{
+  // background: #ccc;
+  display: flex;
+  height: $ht-header-h2;
+  line-height: $ht-header-h2;
+  // padding-left:$ht-header-h2*2;
+  color: $ht-font-color1;
+  font-size: $ht-font-header;
+  font-weight: bold;
+  background: linear-gradient(90deg, 
+		$ht-base-bg1 0%, 
+		$ht-base-bg2 100%);
+    // background:url("./img/sx.svg") no-repeat;
+}
+

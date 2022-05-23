@@ -1,0 +1,31 @@
+@import "../global/mixins/mixins.scss";
+.ht-kj-font1{
+  color: $ht-font-fa-guang;
+  // text-shadow: 0 0 5px $ht-font-color2,
+  //   0 0 20px $ht-font-shadow,
+  //   0 0 35px $ht-font-shadow,
+    // 0 0 40px $ht-font-shadow,
+    // 0 0 50px $ht-font-shadow,
+    // 0 0 75px $ht-font-shadow,
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 5px $ht-font-color2,
+    // 0 0 10px #fff,
+    // 0 0 15px #fff,
+    0 0 15px $ht-font-shadow,
+    0 0 20px $ht-font-shadow,
+    0 0 25px $ht-font-shadow,
+  }
+  to{
+    text-shadow: 0 0 0px $ht-font-color2,
+    // 0 0 10px #fff,
+    // 0 0 15px #fff,
+    0 0 5px $ht-font-shadow,
+    0 0 10px $ht-font-shadow,
+    0 0 15px $ht-font-shadow,
+  }
+}
